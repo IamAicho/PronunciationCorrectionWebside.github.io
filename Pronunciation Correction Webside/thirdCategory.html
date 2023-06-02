@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>舌尖音字詞</title>
+    <link rel="stylesheet" type="text/css" href="ListeningTraining.css"/>
+    <script language="JavaScript">
+        function showUpPhonetic1(){
+          // 先取得要操作的標籤
+          let phoneticDiv1=document.querySelector("#phonetic1");
+          let phoneticDiv11=document.querySelector("#phonetic11");
+          let phoneticDiv2=document.querySelector("#phonetic2");
+          let phoneticDiv22=document.querySelector("#phonetic22");
+          let phoneticDiv3=document.querySelector("#phonetic3");
+          let phoneticDiv33=document.querySelector("#phonetic33");
+          let phoneticDiv4=document.querySelector("#phonetic4");
+          let phoneticDiv44=document.querySelector("#phonetic44");
+          // 再對標籤做操作
+          phoneticDiv1.style.display="block";
+          phoneticDiv11.style.display="block";
+          phoneticDiv2.style.display="none";
+          phoneticDiv22.style.display="none";
+          phoneticDiv3.style.display="none";
+          phoneticDiv33.style.display="none";
+          phoneticDiv4.style.display="none";
+          phoneticDiv44.style.display="none";
+        }
+        function showUpPhonetic2(){
+          // 先取得要操作的標籤
+          let phoneticDiv1=document.querySelector("#phonetic1");
+          let phoneticDiv11=document.querySelector("#phonetic11");
+          let phoneticDiv2=document.querySelector("#phonetic2");
+          let phoneticDiv22=document.querySelector("#phonetic22");
+          let phoneticDiv3=document.querySelector("#phonetic3");
+          let phoneticDiv33=document.querySelector("#phonetic33");
+          let phoneticDiv4=document.querySelector("#phonetic4");
+          let phoneticDiv44=document.querySelector("#phonetic44");
+          // 再對標籤做操作
+          phoneticDiv1.style.display="none";
+          phoneticDiv11.style.display="none";
+          phoneticDiv2.style.display="block";
+          phoneticDiv22.style.display="block";
+          phoneticDiv3.style.display="none";
+          phoneticDiv33.style.display="none";
+          phoneticDiv4.style.display="none";
+          phoneticDiv44.style.display="none";
+        }
+        function showUpPhonetic3(){
+          // 先取得要操作的標籤
+          let phoneticDiv1=document.querySelector("#phonetic1");
+          let phoneticDiv11=document.querySelector("#phonetic11");
+          let phoneticDiv2=document.querySelector("#phonetic2");
+          let phoneticDiv22=document.querySelector("#phonetic22");
+          let phoneticDiv3=document.querySelector("#phonetic3");
+          let phoneticDiv33=document.querySelector("#phonetic33");
+          let phoneticDiv4=document.querySelector("#phonetic4");
+          let phoneticDiv44=document.querySelector("#phonetic44");
+          // 再對標籤做操作
+          phoneticDiv1.style.display="none";
+          phoneticDiv11.style.display="none";
+          phoneticDiv2.style.display="none";
+          phoneticDiv22.style.display="none";
+          phoneticDiv3.style.display="block";
+          phoneticDiv33.style.display="block";
+          phoneticDiv4.style.display="none";
+          phoneticDiv44.style.display="none";
+        }
+        function showUpPhonetic4(){
+          // 先取得要操作的標籤
+          let phoneticDiv1=document.querySelector("#phonetic1");
+          let phoneticDiv11=document.querySelector("#phonetic11");
+          let phoneticDiv2=document.querySelector("#phonetic2");
+          let phoneticDiv22=document.querySelector("#phonetic22");
+          let phoneticDiv3=document.querySelector("#phonetic3");
+          let phoneticDiv33=document.querySelector("#phonetic33");
+          let phoneticDiv4=document.querySelector("#phonetic4");
+          let phoneticDiv44=document.querySelector("#phonetic44");
+          // 再對標籤做操作
+          phoneticDiv1.style.display="none";
+          phoneticDiv11.style.display="none";
+          phoneticDiv2.style.display="none";
+          phoneticDiv22.style.display="none";
+          phoneticDiv3.style.display="none";
+          phoneticDiv33.style.display="none";
+          phoneticDiv4.style.display="block";
+          phoneticDiv44.style.display="block ";
+        }
+          
+        function startTime(){
+          var today=new Date();//定義日期物件   
+          var yyyy = today.getFullYear();//通過日期物件的getFullYear()方法返回年    
+          var MM = today.getMonth()+1;//通過日期物件的getMonth()方法返回年    
+          var dd = today.getDate();//通過日期物件的getDate()方法返回年     
+          var hh=today.getHours();//通過日期物件的getHours方法返回小時   
+          var mm=today.getMinutes();//通過日期物件的getMinutes方法返回分鐘   
+          var ss=today.getSeconds();//通過日期物件的getSeconds方法返回秒   
+          // 如果分鐘或小時的值小於10，則在其值前加0，比如如果時間是下午3點20分9秒的話，則顯示15：20：09   
+          MM=checkTime(MM);
+          dd=checkTime(dd);
+          mm=checkTime(mm);   
+          ss=checkTime(ss);    
+          var day; //用於儲存星期（getDay()方法得到星期編號）
+          if(today.getDay()==0)   day   =   "(日) " 
+          if(today.getDay()==1)   day   =   "(一) " 
+          if(today.getDay()==2)   day   =   "(二) " 
+          if(today.getDay()==3)   day   =   "(三) " 
+          if(today.getDay()==4)   day   =   "(四) " 
+          if(today.getDay()==5)   day   =   "(五) " 
+          if(today.getDay()==6)   day   =   "(六) " 
+          document.getElementById('nowDateTimeSpan').innerHTML=yyyy+"-"+MM +"-"+ dd + day +" " + hh+":"+mm+":"+ss;   
+          setTimeout('startTime()',1000);//每一秒中重新載入startTime()方法  
+        }
+        function checkTime(i){   
+          if (i<10){
+            i="0" + i;
+          }   
+          return i;
+        }  
+    </script>
+</head>
+<body onload="startTime()">
+    <div class="container">
+      <!-- 上層 -->
+      <header>
+        <a href="index.html">返回目錄</a>
+
+        <h2>3.舌尖音</h2>
+        <img src="image/ㄉ.jpg" width="50" onclick="showUpPhonetic1();">
+        <img src="image/ㄊ.jpg" width="50" onclick="showUpPhonetic2();">
+        <img src="image/ㄋ.jpg" width="50" onclick="showUpPhonetic3();">
+        <img src="image/ㄌ.jpg" width="50" onclick="showUpPhonetic4();">
+        <hr>
+      </header>
+
+      <!-- 左層 -->
+      <section> 
+        <div>
+          <div id="phonetic1">ㄉ的音檔<br><br>
+            <span class="content">跌倒<audio src="sound/monophonic/ㄉ/跌倒.mp3" controls="true"></audio></span><br>
+            <span class="content">對不起<audio src="sound/monophonic/ㄉ/對不起.mp3" controls="true"></audio></span>
+          </div>
+          <div id="phonetic2" style="display: none;">ㄊ的音檔<br><br>
+            <span class="content">踢球<audio src="sound/monophonic/ㄊ/踢球.mp3" controls="true"></audio></span><br>
+            <span class="content">太陽<audio src="sound/monophonic/ㄊ/太陽.mp3" controls="true"></audio></span>
+          </div>
+          <div id="phonetic3" style="display: none;">ㄋ的音檔<br><br>
+            <span class="content">牛奶<audio src="sound/monophonic/ㄋ/牛奶.mp3" controls="true"></audio></span><br>
+            <span class="content">捏耳朵<audio src="sound/monophonic/ㄋ/捏耳朵.mp3" controls="true"></audio></span>
+          </div>
+          <div id="phonetic4" style="display: none;">ㄌ的音檔<br><br>
+            <span class="content">聊天<audio src="sound/monophonic/ㄌ/聊天.mp3" controls="true"></audio></span><br>
+            <span class="content">亮晶晶<audio src="sound/monophonic/ㄌ/亮晶晶.mp3" controls="true"></audio></span>
+          </div>
+        </div>
+        <p><input type="submit" value="上傳字詞音檔"></p>
+      </section>
+    
+      <!-- 右層 -->
+      <aside> 
+        <p>訓練時間：<span id="nowDateTimeSpan"></span></p>
+        <div id="phonetic11">
+          <p>名字：<input type="text" name="name" value="我是小菜"></p>
+          <p>播放的背景音：
+            <input type="radio" name="BGM" value="none"> 無
+            <input type="radio" name="BGM" value="water-sink-faucet"> 水龍頭
+            <input type="radio" name="BGM" value="train"> 火車
+          </p>
+          <p>訓練的字詞：(選取異常類型)<br>
+            <input type="checkbox" name="ㄉ" value="跌倒"> 跌倒
+            <select name="mistake">
+              <option value="1">X</option>
+              <option value="2">替代音</option>
+              <option value="3">扭曲音</option>
+              <option value="4">省略音</option>
+              <option value="5">贅加音</option>
+              <option value="6">聲調錯誤</option>
+              <option value="7">整體性的語音不清</option>
+            </select>
+            <br>
+            <input type="checkbox" name="ㄉ" value="對不起"> 對不起
+            <select name="mistake">
+              <option value="1">X</option>
+              <option value="2">替代音</option>
+              <option value="3">扭曲音</option>
+              <option value="4">省略音</option>
+              <option value="5">贅加音</option>
+              <option value="6">聲調錯誤</option>
+              <option value="7">整體性的語音不清</option>
+            </select>
+          </p>
+          <p>備註：<br>
+            <textarea name="comments" rows="2" cols="30">詳述訓練狀況</textarea>
+          </p>
+        </div>
+        <div id="phonetic22" style="display: none;">
+          <p>名字：<input type="text" name="name" value="我是小菜"></p>
+          <p>播放的背景音：
+            <input type="radio" name="BGM" value="none"> 無
+            <input type="radio" name="BGM" value="water-sink-faucet"> 水龍頭
+            <input type="radio" name="BGM" value="train"> 火車
+          </p>
+          <p>訓練的字詞：(選取異常類型)<br>
+            <input type="checkbox" name="ㄊ" value="踢球"> 踢球
+            <select name="mistake">
+              <option value="1">X</option>
+              <option value="2">替代音</option>
+              <option value="3">扭曲音</option>
+              <option value="4">省略音</option>
+              <option value="5">贅加音</option>
+              <option value="6">聲調錯誤</option>
+              <option value="7">整體性的語音不清</option>
+            </select>
+            <br>
+            <input type="checkbox" name="ㄊ" value="太陽"> 太陽
+            <select name="mistake">
+              <option value="1">X</option>
+              <option value="2">替代音</option>
+              <option value="3">扭曲音</option>
+              <option value="4">省略音</option>
+              <option value="5">贅加音</option>
+              <option value="6">聲調錯誤</option>
+              <option value="7">整體性的語音不清</option>
+            </select>
+          </p>
+          <p>備註：<br>
+            <textarea name="comments" rows="2" cols="30">詳述訓練狀況</textarea>
+          </p>
+        </div>
+        <div id="phonetic33" style="display: none;">
+          <p>名字：<input type="text" name="name" value="我是小菜"></p>
+          <p>播放的背景音：
+            <input type="radio" name="interest" value="none"> 無
+            <input type="radio" name="interest" value="water-sink-faucet"> 水龍頭
+            <input type="radio" name="interest" value="train"> 火車
+          </p>
+          <p>訓練的字詞：(選取異常類型)<br>
+            <input type="checkbox" name="ㄋ" value="牛奶"> 牛奶
+            <select name="mistake">
+              <option value="1">X</option>
+              <option value="2">替代音</option>
+              <option value="3">扭曲音</option>
+              <option value="4">省略音</option>
+              <option value="5">贅加音</option>
+              <option value="6">聲調錯誤</option>
+              <option value="7">整體性的語音不清</option>
+            </select>
+            <br>
+            <input type="checkbox" name="ㄋ" value="捏耳朵"> 捏耳朵
+            <select name="mistake">
+              <option value="1">X</option>
+              <option value="2">替代音</option>
+              <option value="3">扭曲音</option>
+              <option value="4">省略音</option>
+              <option value="5">贅加音</option>
+              <option value="6">聲調錯誤</option>
+              <option value="7">整體性的語音不清</option>
+            </select>
+          </p>
+          <p>備註：<br>
+            <textarea name="comments" rows="2" cols="30">詳述訓練狀況</textarea>
+          </p>
+        </div>
+        <div id="phonetic44" style="display: none;">
+          <p>名字：<input type="text" name="name" value="我是小菜"></p>
+          <p>播放的背景音：
+            <input type="radio" name="interest" value="none"> 無
+            <input type="radio" name="interest" value="water-sink-faucet"> 水龍頭
+            <input type="radio" name="interest" value="train"> 火車
+          </p>
+          <p>訓練的字詞：(選取異常類型)<br>
+            <input type="checkbox" name="ㄌ" value="聊天"> 聊天
+            <select name="mistake">
+              <option value="1">X</option>
+              <option value="2">替代音</option>
+              <option value="3">扭曲音</option>
+              <option value="4">省略音</option>
+              <option value="5">贅加音</option>
+              <option value="6">聲調錯誤</option>
+              <option value="7">整體性的語音不清</option>
+            </select>
+            <br>
+            <input type="checkbox" name="ㄌ" value="亮晶晶"> 亮晶晶
+            <select name="mistake">
+              <option value="1">X</option>
+              <option value="2">替代音</option>
+              <option value="3">扭曲音</option>
+              <option value="4">省略音</option>
+              <option value="5">贅加音</option>
+              <option value="6">聲調錯誤</option>
+              <option value="7">整體性的語音不清</option>
+            </select>
+          </p>
+          <p>備註：<br>
+            <textarea name="comments" rows="2" cols="30">詳述訓練狀況</textarea>
+          </p>
+        </div>
+        <p><input type="submit" value="匯出資料"></p>
+      </aside>
+    
+      <!-- 下層 -->
+      <footer> 
+        <h2>背景音選擇</h2>
+        <p class="content">水龍頭<audio src="sound/BGS/water-sink-faucet.wav" loop="true" controls id="player"></audio></p>
+        <p class="content">火車站<audio src="sound/BGS/train.mp3" loop="true" controls="true"></audio></p>
+        <p><input type="submit" value="上傳背景音檔"></p><br>
+      </footer>
+  </div>
+</body>
+</html>
