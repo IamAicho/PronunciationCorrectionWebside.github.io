@@ -8,3 +8,8 @@ The project team consists of students from the Biomedical Engineering and Specia
 Explanation of Website Functionalities：
 On the homepage, the categories are classified based on different pronunciation areas. By clicking on the desired category, users can proceed to the next page for practice.
 On the page for playing audio, on the left side, users can select images to choose the speech sounds they want to practice. There are two default speech sounds available for playback, and users can also upload their own audio files to play. Additionally, users can play background noise to increase the difficulty of listening. On the right side, users can record the practice results of hearing-impaired children and assess their learning effectiveness.
+
+
+
+Display URL：
+https://iamaicho.github.io/PronunciationCorrectionWebside.github.io/index.html
